@@ -16,8 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from app.views import calc, hello, order
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("age-in/<int:end>/<int:birthyear>", calc),
+    path("calc/", calc, name="AgeThen"),
+    path("Hey/", hello, name="Hello"),
+    path("order-total/", order, name="Order"),
 ]
