@@ -5,14 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
 <body>
-    <form action="{% url "AgeThen" %}" method="GET">
-        {{ form }}
-
+    <form method="GET" action="{% url "AgeThen" %}">
+        {{ form.as_p }}          
         <button type="submit">Click</button>
 
-        <p>{{ X }} + {{ Y }} = {{ answer }}
+        <p>{{ X }}  {{ Y }} = {{ answer }}</p>
+
     </form>
 </body>
 </html>

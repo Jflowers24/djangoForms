@@ -13,7 +13,7 @@ def calc(request):
             request, "calc.html", {"form": form, "X": X, "Y": Y, "answer": answer}
         )
     else:
-        return render(request, "calc.html")
+        return render(request, "calc.html", {"form": AgeForm()})
 
 
 def hello(request):
